@@ -57,7 +57,8 @@ By integrating real-time facial expression analysis with Spotify’s music libra
 ---
 
 ## UI
-![Sample UI](https://github.com/user-attachments/assets/ab58233d-229d-4c88-ad17-f458718f5841)
+![Updated Sample UI](https://github.com/user-attachments/assets/f9cb04b8-4b38-4429-b619-bfb0f83183ae)
+
 
 
 
