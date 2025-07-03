@@ -1,6 +1,6 @@
 # vibeify
 ## Overview  
-Vibeify is a smart, mood-aware mobile app that uses facial emotion recognition to recommend a single song tailored to your current feelings. Simply scan your face, and Vibeify instantly plays a 30-second Spotify preview matching your vibe—no typing or searching needed.
+Vibeify is a smart, mood-aware mobile app that uses facial emotion recognition to recommend a single song tailored to your current feelings. Simply scan your face, and Vibeify instantly plays a 15-second Spotify preview matching your vibe—no typing or searching needed.
 
 By integrating real-time facial expression analysis with Spotify’s music library, Vibeify offers a fun, personalized music experience perfect for students, music lovers, and anyone who wants songs that truly resonate.
 
