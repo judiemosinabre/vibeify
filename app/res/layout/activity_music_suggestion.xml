@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighterBlack"
+    tools:context=".MusicSuggestionActivity">
+
+
+    <TextView
+        android:id="@+id/heading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold_18"
+        android:paddingLeft="35dp"
+        android:paddingTop="30dp"
+        android:text="Vibeify"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/albumCover"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Album Cover"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading2"
+        />
+
+    <!-- Song Name -->
+    <TextView
+        android:id="@+id/songNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:fontFamily="@font/inter_bold_28"
+        android:text="Song Title"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/albumCover" />
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/artistText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:fontFamily="@font/inter_regular_18"
+        android:text="Artist Name"
+        android:textColor="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songNameText" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintTop_toBottomOf="@id/artistText"/>
+
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="32dp">
+
+        <TextView
+            android:id="@+id/timeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            android:fontFamily="@font/inter_regular_18"/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/timeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:15"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            android:fontFamily="@font/inter_regular_18"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/artistText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/inter_regular_18"
+        android:gravity="center"
+        android:text="Your vibe picked this!"
+        android:textColor="#CCCCCC"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artistText">
+
+
+        <Button
+            android:id="@+id/playPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/darkGreen"
+            android:enabled="false"
+            android:fontFamily="@font/inter_bold_28"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="30dp"
+            android:text="PLAY"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/qrBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkGray"
+            android:fontFamily="@font/inter_bold_28"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="30dp"
+            android:text="SCAN QR"
+            android:textColor="@color/neonGreen"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+    <!-- Footer background -->
+    <TextView
+        android:id="@+id/footerNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Camera Button + Text -->
+    <LinearLayout
+        android:id="@+id/cameraLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="60dp">
+
+        <ImageButton
+            android:id="@+id/cameraIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/camera_icon"
+            android:contentDescription="Camera" />
+
+        <TextView
+            android:id="@+id/cameraIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Album Button + Text -->
+    <LinearLayout
+        android:id="@+id/albumLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintStart_toEndOf="@id/cameraLayout"
+        android:layout_marginStart="90dp">
+
+        <ImageButton
+            android:id="@+id/albumIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/album_icon"
+            android:contentDescription="Music" />
+
+        <TextView
+            android:id="@+id/albumIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- QR Button + Text -->
+    <LinearLayout
+        android:id="@+id/qrLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="48dp">
+
+        <ImageButton
+            android:id="@+id/qrIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/scan_qr_icon"
+            android:contentDescription="Scan QR" />
+
+        <TextView
+            android:id="@+id/qrIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan QR"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

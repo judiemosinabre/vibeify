@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighterBlack"
+    tools:context=".QRScanActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/heading3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold_18"
+        android:paddingLeft="35dp"
+        android:paddingTop="30dp"
+        android:text="Vibeify"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/heading3"
+        app:layout_constraintBottom_toTopOf="@id/footerNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="0dp"
+            android:paddingTop="0dp">
+
+            <!-- Song Name -->
+            <TextView
+                android:id="@+id/songNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_bold_28"
+                android:gravity="start"
+                android:text="Song Title"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Artist Name -->
+            <TextView
+                android:id="@+id/artistText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="24dp"
+                android:gravity="start"
+                android:fontFamily="@font/inter_regular_18"
+                android:text="Artist Name"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+
+            <!-- Mood Text -->
+            <TextView
+                android:id="@+id/moodText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/mood_background"
+                android:fontFamily="@font/inter_regular_18"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="Current Mood: "
+                android:textColor="#FFFFFF"
+                android:textSize="8sp" />
+
+            <!-- QR Prompt -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Scan QR to view song on Spotify"
+                android:textColor="#FFFFFF" />
+
+            <!-- QR Code Image -->
+            <ImageView
+                android:id="@+id/qrImageView"
+                android:layout_width="360dp"
+                android:layout_height="390dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/qr_bg" />
+
+            <!-- Buttons Row -->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/homeeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/darkGreen"
+                    android:fontFamily="@font/inter_bold_28"
+                    android:paddingHorizontal="45dp"
+                    android:paddingVertical="30dp"
+                    android:text="TRY AGAIN"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/darkGray"
+                    android:fontFamily="@font/inter_bold_28"
+                    android:paddingHorizontal="68dp"
+                    android:paddingVertical="30dp"
+                    android:text="BACK"
+                    android:textColor="@color/neonGreen"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+
+            <!-- Share Button -->
+            <Button
+                android:id="@+id/shareToStoryBtn"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/darkGray"
+                android:fontFamily="@font/inter_bold_28"
+                android:paddingHorizontal="0dp"
+                android:paddingVertical="30dp"
+                android:text="SHARE"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Footer background -->
+    <TextView
+        android:id="@+id/footerNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Camera Button + Text -->
+    <LinearLayout
+        android:id="@+id/cameraLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="60dp">
+
+        <ImageButton
+            android:id="@+id/cameraIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/camera_icon"
+            android:contentDescription="Camera" />
+
+        <TextView
+            android:id="@+id/cameraIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Album Button + Text -->
+    <LinearLayout
+        android:id="@+id/albumLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintStart_toEndOf="@id/cameraLayout"
+        android:layout_marginStart="90dp">
+
+        <ImageButton
+            android:id="@+id/albumIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/album_icon"
+            android:contentDescription="Music" />
+
+        <TextView
+            android:id="@+id/albumIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- QR Button + Text -->
+    <LinearLayout
+        android:id="@+id/qrLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/footerNav"
+        app:layout_constraintTop_toTopOf="@+id/footerNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="48dp">
+
+        <ImageButton
+            android:id="@+id/qrIconButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/scan_qr_icon"
+            android:contentDescription="Scan QR" />
+
+        <TextView
+            android:id="@+id/qrIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan QR"
+            android:textColor="#A0A0A0"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
